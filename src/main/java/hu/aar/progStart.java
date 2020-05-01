@@ -8,9 +8,12 @@ import javafx.scene.control.TextField;
 
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.time.YearMonth;
 
 public class progStart {
+
+    LoginModel loginModel = new LoginModel();
 
     @FXML
     TextField loginEmail;
