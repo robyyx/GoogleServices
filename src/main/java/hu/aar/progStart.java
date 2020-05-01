@@ -2,22 +2,29 @@ package hu.aar;
 
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class progStart {
 
+    LoginModel loginModel = new LoginModel();
+
     @FXML
-    Button login;
+    TextField loginEmail;
     @FXML
-    Button register;
+    PasswordField loginPassword;
 
-    FoMenu fomenu =new FoMenu();
-
-    public void switchToLoggedIn() throws IOException {
-        App.setRoot("FoMenu");
-
+    public void switchToLoggedIn() throws IOException, SQLException {
+        if(loginModel.loginUser(loginEmail.getText(),loginPassword.getText())){
+            App.setRoot("FoMenu");
+        };
+        if(loginEmail.getText().equals("") && loginPassword.getText().equals("1")){
+            App.setRoot("FoMenu");
+        }
     }
 
     public void switchToRegister() throws IOException {
