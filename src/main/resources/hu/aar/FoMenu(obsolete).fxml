@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab text="Naptár">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Text layoutX="201.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" wrappingWidth="40.13671875" />
+                  <Text layoutX="453.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" wrappingWidth="40.13671875" />
+                  <Text layoutX="140.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="40.13671875" />
+                  <Text layoutX="518.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" wrappingWidth="40.13671875" />
+                  <Text layoutX="259.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="40.13671875" />
+                  <Text layoutX="315.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" wrappingWidth="53.13671875" />
+                  <Text layoutX="388.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" wrappingWidth="40.13671875" />
+                  <Separator layoutX="140.0" layoutY="48.0" prefHeight="2.0" prefWidth="403.0" />
+                  <GridPane gridLinesVisible="true" layoutX="141.0" layoutY="51.0" prefHeight="246.0" prefWidth="441.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+                  <GridPane gridLinesVisible="true" layoutX="55.0" layoutY="52.0" prefHeight="245.0" prefWidth="29.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Text layoutX="61.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Óra     Dátum" wrappingWidth="90.32421875" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Dokumentumok">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="63.0" layoutY="296.0" mnemonicParsing="false" text="Mentés" />
+                  <TextField layoutX="63.0" layoutY="36.0" prefHeight="243.0" prefWidth="482.0" />
+                  <Button layoutX="138.0" layoutY="296.0" mnemonicParsing="false" text="Megosztás" />
+                  <Button layoutX="225.0" layoutY="296.0" mnemonicParsing="false" text="Modositás..." />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Mapparendszer">
+          <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="14.0" layoutY="27.0" mnemonicParsing="false" text="Létrehoz" />
+                  <Button layoutX="14.0" layoutY="107.0" mnemonicParsing="false" text="Módosít..." />
+                  <Button layoutX="14.0" layoutY="186.0" mnemonicParsing="false" text="Megosztás" />
+                  <TextField layoutX="14.0" layoutY="52.0" />
+                  <TextField layoutX="14.0" layoutY="132.0" />
+                  <TextArea layoutX="220.0" layoutY="27.0" prefHeight="260.0" prefWidth="353.0" text="Mappák felsorolva?" />
+               </children></AnchorPane>
+          </content>
+      </Tab>
+  </tabs>
+</TabPane>
