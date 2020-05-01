@@ -6,24 +6,25 @@
 <?import javafx.scene.text.Text?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0"
             xmlns="http://javafx.com/javafx/11.0.1" fx:controller="hu.aar.Regisztracio">
-   <children>
-      <Pane prefHeight="406.0" prefWidth="609.0">
-         <children>
-            <Text layoutX="230.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail"
-                  wrappingWidth="67.13671875"/>
-            <TextField layoutX="230.0" layoutY="123.0"/>
-            <TextField layoutX="230.0" layoutY="178.0"/>
-            <TextField layoutX="230.0" layoutY="236.0"/>
-            <Text layoutX="230.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jelszó"/>
-            <Text layoutX="230.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jelszó újra"
-                  wrappingWidth="95.13671875"/>
-            <TextField layoutX="230.0" layoutY="74.0"/>
-            <Text layoutX="230.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Név"
-                  wrappingWidth="83.13671875"/>
-            <Button fx:id="Registration" layoutX="240.0" layoutY="280.0" mnemonicParsing="false" prefHeight="25.0"
-                    prefWidth="122.0" text="Regisztracio"/>
-            <Button layoutX="280.0" layoutY="347.0" mnemonicParsing="false" onAction="#switchToStart" text="Vissza"/>
-         </children>
+    <children>
+        <Pane prefHeight="406.0" prefWidth="609.0">
+            <children>
+                <Text layoutX="230.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail"
+                      wrappingWidth="67.13671875"/>
+                <TextField fx:id="registerFieldEmail" layoutX="230.0" layoutY="123.0"/>
+                <TextField fx:id="registerFieldPassword" layoutX="230.0" layoutY="178.0"/>
+                <TextField fx:id="registerFieldPasswordAgain" layoutX="230.0" layoutY="236.0"/>
+                <Text layoutX="230.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jelszó"/>
+                <Text layoutX="230.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jelszó újra"
+                      wrappingWidth="95.13671875"/>
+                <TextField fx:id="registerFieldName" layoutX="230.0" layoutY="74.0"/>
+                <Text layoutX="230.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Név"
+                      wrappingWidth="83.13671875"/>
+                <Button fx:id="buttonRegistration" layoutX="240.0" layoutY="280.0" mnemonicParsing="false"
+                        onAction="#registerUser" prefHeight="25.0" prefWidth="122.0" text="Regisztracio"/>
+                <Button fx:id="buttonBackToStart" layoutX="280.0" layoutY="347.0" mnemonicParsing="false"
+                        onAction="#switchToStart" text="Vissza"/>
+            </children>
       </Pane>
    </children>
 </AnchorPane>
