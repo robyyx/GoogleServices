@@ -1,4 +1,4 @@
-package Adatbazisokbeadando.Naptar;
+package hu.aar.Naptar;
 
 import javafx.geometry.Pos;
 import javafx.scene.Node;

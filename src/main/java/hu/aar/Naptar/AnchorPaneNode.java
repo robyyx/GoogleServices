@@ -1,4 +1,4 @@
-package Adatbazisokbeadando.Naptar;
+package hu.aar.Naptar;
 
 import javafx.scene.Node;
 import javafx.scene.layout.AnchorPane;

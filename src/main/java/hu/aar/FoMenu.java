@@ -1,6 +1,6 @@
-package Adatbazisokbeadando;
+package hu.aar;
 
-import Adatbazisokbeadando.Naptar.FullCalendarView;
+import hu.aar.Naptar.FullCalendarView;
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
 

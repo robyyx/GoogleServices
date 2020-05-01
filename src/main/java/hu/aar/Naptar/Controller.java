@@ -1,4 +1,4 @@
-package Adatbazisokbeadando.Naptar;
+package hu.aar.Naptar;
 
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
