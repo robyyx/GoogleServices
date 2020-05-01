@@ -1,17 +1,16 @@
 package hu.aar;
 
 
+import hu.aar.Naptar.FullCalendarView;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 
 import java.io.IOException;
-import java.sql.SQLException;
+import java.time.YearMonth;
 
 public class progStart {
-
-    LoginModel loginModel = new LoginModel();
 
     @FXML
     TextField loginEmail;

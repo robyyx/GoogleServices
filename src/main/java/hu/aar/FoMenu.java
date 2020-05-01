@@ -13,16 +13,34 @@ public class FoMenu  {
 
 
     @FXML
-    Pane NaptarPane;
+    public Pane Naptar;
+    boolean letezik = false;
 
-    public void switchToCreateDocument () throws IOException {
 
-        App.setRoot("CreateDoc");
+    public void addCalendar () throws IOException{
+    if (letezik == false) {
+        Naptar.getChildren().add(new FullCalendarView(YearMonth.now()).getView());
+      letezik = !letezik;
+            }
+    }
+
+    public void switchToDocuments () throws IOException {
+        App.setRoot("Documents");
 
      }
 
     public void switchToCalendar () throws IOException {
-        NaptarPane.getChildren().add(new FullCalendarView(YearMonth.now()).getView());
+        App.setRoot("FoMenu");
     }
+
+    public void switchToEventCreator () throws IOException {
+        App.setRoot("Esemenykeszitese");
+    }
+
+    public void switchToGroups() throws IOException {
+        App.setRoot("CsoportokMegtekintese");
+    }
+
+
 
 }
