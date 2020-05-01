@@ -1,32 +1,32 @@
 package hu.aar;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class Regisztracio {
 
-    registrationModel registrationModel = new registrationModel();
+    private RegistrationModel registrationModel = new RegistrationModel();
 
-    @FXML
-    Button Registration;
     @FXML
     TextField registerFieldName;
     @FXML
     TextField registerFieldEmail;
     @FXML
-    TextField registerFieldPassword;
+    PasswordField registerFieldPassword;
     @FXML
-    TextField registerFieldPasswordAgain;
+    PasswordField registerFieldPasswordAgain;
 
 
     public void switchToStart() throws IOException {
         App.setRoot("progStart");
     }
 
-    public void registerUser() throws IOException {
+    public void registerUser() throws IOException, SQLException {
         registrationModel.createUser(registerFieldEmail.getText(), registerFieldName.getText(), registerFieldPassword.getText());
+        App.setRoot("progStart");
     }
 }

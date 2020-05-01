@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.aar.Regisztracio">
+    <children>
+      <BorderPane prefHeight="600.0" prefWidth="800.0">
+         <center>
+            <VBox alignment="CENTER" fillWidth="false" BorderPane.alignment="CENTER">
+               <children>
+                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Név">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Text>
+                      <TextField fx:id="registerFieldName" />
+                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Text>
+                      <TextField fx:id="registerFieldEmail" />
+                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Jelszó">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <PasswordField fx:id="registerFieldPassword" />
+                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Jelszó újra">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Text>
+                  <PasswordField fx:id="registerFieldPasswordAgain" />
+                      <Button fx:id="buttonRegistration" mnemonicParsing="false" onAction="#registerUser" prefHeight="25.0" prefWidth="122.0" text="Regisztracio" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                      <Button fx:id="buttonBackToStart" mnemonicParsing="false" onAction="#switchToStart" text="Vissza">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </center>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </BorderPane>
+   </children>
+</AnchorPane>
