@@ -5,10 +5,11 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.aar.FoMenu">
     <MenuBar VBox.vgrow="NEVER">
         <menus>
@@ -37,12 +38,22 @@
             </Menu>
         </menus>
     </MenuBar>
-   <Button mnemonicParsing="false" onAction="#addCalendar" text="Show/hide" />
+   <AnchorPane />
+   <AnchorPane>
+      <children>
+         <TableView prefHeight="368.0" prefWidth="402.0">
+           <columns>
+             <TableColumn prefWidth="200.0" text="Csoportok" />
+             <TableColumn prefWidth="200.0" text="Csoportjaim" />
+           </columns>
+         </TableView>
+         <Button layoutX="415.0" layoutY="316.0" mnemonicParsing="false" text="Csatlakozas" />
+         <Button layoutX="511.0" layoutY="316.0" mnemonicParsing="false" text="Elhagyás" />
+      </children>
+   </AnchorPane>
     <children>
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
             <children>
-                <Pane fx:id="Naptar" prefHeight="374.0" prefWidth="640.0">
-                </Pane>
             </children>
         </AnchorPane>
     </children>

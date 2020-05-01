@@ -5,10 +5,10 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.aar.FoMenu">
     <MenuBar VBox.vgrow="NEVER">
         <menus>
@@ -23,7 +23,9 @@
             </Menu>
             <Menu mnemonicParsing="false" text="Mappák">
                 <items>
-                    <MenuItem mnemonicParsing="false" onAction="#switchToDocuments" text="Dokumentumok" />
+                    <MenuItem mnemonicParsing="false" onAction="#switchToCreateDocument" text="Dokumentum keszitese" />
+                    <MenuItem mnemonicParsing="false" text="Dokumentum modositasa" />
+                    <MenuItem mnemonicParsing="false" text="Dokumentum megosztasa" />
                     <SeparatorMenuItem mnemonicParsing="false" />
                     <MenuItem mnemonicParsing="false" text="Mappa létrehozása" />
                     <MenuItem mnemonicParsing="false" text="Mappa modositasa" />
@@ -37,13 +39,16 @@
             </Menu>
         </menus>
     </MenuBar>
-   <Button mnemonicParsing="false" onAction="#addCalendar" text="Show/hide" />
+   <AnchorPane prefHeight="375.0" prefWidth="640.0">
+      <children>
+         <TextArea layoutX="26.0" layoutY="24.0" prefHeight="292.0" prefWidth="577.0" />
+         <Button layoutX="46.0" layoutY="334.0" mnemonicParsing="false" text="Megnyitas.." />
+         <Button layoutX="146.0" layoutY="334.0" mnemonicParsing="false" text="Mentés" />
+         <Button layoutX="226.0" layoutY="334.0" mnemonicParsing="false" text="Mentés másként.." />
+      </children>
+   </AnchorPane>
     <children>
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
-            <children>
-                <Pane fx:id="Naptar" prefHeight="374.0" prefWidth="640.0">
-                </Pane>
-            </children>
         </AnchorPane>
     </children>
 </VBox>
