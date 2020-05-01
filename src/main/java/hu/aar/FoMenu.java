@@ -37,10 +37,6 @@ public class FoMenu  {
         App.setRoot("Esemenykeszitese");
     }
 
-    public void switchToEventModifier () throws IOException {
-        App.setRoot("EsemenyModositas");
-    }
-
     public void switchToGroups() throws IOException {
         App.setRoot("CsoportokMegtekintese");
     }

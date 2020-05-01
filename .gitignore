@@ -14,3 +14,16 @@ target/
 .idea/
 *.iml
 *.iws
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Maven
+log/
+target/
+
+# Intellij
+.idea/
+*.iml
+*.iws

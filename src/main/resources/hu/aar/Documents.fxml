@@ -13,33 +13,7 @@
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.aar.FoMenu">
     <children>
-        <MenuBar VBox.vgrow="NEVER">
-            <menus>
-                <Menu mnemonicParsing="false" text="Naptár">
-                    <items>
-                        <MenuItem mnemonicParsing="false" onAction="#switchToCalendar" text="Eseményeim" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="Meglévő esemény módosítása" />
-                        <MenuItem mnemonicParsing="false" onAction="#switchToEventCreator" text="Esemény készitése" />
-                        <MenuItem mnemonicParsing="false" text="Esemény megosztása" />
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Mappák">
-                    <items>
-                        <MenuItem mnemonicParsing="false" onAction="#switchToDocuments" text="Dokumentumok" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="Mappa létrehozása" />
-                        <MenuItem mnemonicParsing="false" text="Mappa modositasa" />
-                        <MenuItem mnemonicParsing="false" text="Mappa megosztasa" />
-                    </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Csoportok">
-                    <items>
-                        <MenuItem mnemonicParsing="false" onAction="#switchToGroups" text="Csoportok" />
-                    </items>
-                </Menu>
-            </menus>
-        </MenuBar>
+        <fx:include source="Navigator.fxml" />
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
             <Button layoutX="146.0" layoutY="336.0" mnemonicParsing="false" text="Mentés" />
