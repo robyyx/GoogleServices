@@ -2,14 +2,24 @@ package hu.aar;
 
 import hu.aar.Naptar.FullCalendarView;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.time.YearMonth;
 
 
 public class FoMenu  {
 
+    DocumentModel documentModel = new DocumentModel();
+
+    @FXML
+    private TextField textFieldDocumentName;
+
+    @FXML
+    private TextArea textAreaDocumentContent;
 
 
     @FXML
@@ -39,6 +49,19 @@ public class FoMenu  {
 
     public void switchToGroups() throws IOException {
         App.setRoot("CsoportokMegtekintese");
+    }
+
+    public void clearDocument(){
+        textFieldDocumentName.setText("");
+        textAreaDocumentContent.setText("");
+    }
+
+    public void saveDocumentToRootFolder() throws SQLException {
+        documentModel.saveDocumentToRootFolder(textFieldDocumentName.getText(), textAreaDocumentContent.getText());
+    }
+
+    public void loadDocument() throws SQLException {
+        documentModel.loadDocument(textFieldDocumentName,textAreaDocumentContent);
     }
 
 
