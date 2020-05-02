@@ -13,7 +13,7 @@
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
             <Button fx:id="buttonSaveDocument" layoutX="146.0" layoutY="336.0" mnemonicParsing="false" onAction="#saveDocumentToRootFolder" text="Mentés" />
-            <TextArea fx:id="textAreaDocumentContent" layoutX="25.0" layoutY="51.0" prefHeight="276.0" prefWidth="588.0" />
+            <TextArea fx:id="textAreaDocumentContent" layoutX="25.0" layoutY="51.0" prefHeight="276.0" prefWidth="588.0" wrapText="true" />
             <Text layoutX="25.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Név:" />
             <TextField fx:id="textFieldDocumentName" layoutX="53.0" layoutY="22.0" />
             <Button layoutX="215.0" layoutY="336.0" mnemonicParsing="false" text="Mentés másként" />

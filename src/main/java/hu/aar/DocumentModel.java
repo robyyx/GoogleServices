@@ -2,6 +2,7 @@ package hu.aar;
 
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.DirectoryChooser;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -44,11 +45,11 @@ public class DocumentModel {
         PreparedStatement psSD = DatabaseConnection.getConnection().prepareStatement(sqlSearchDocument);
         psSD.setInt(1,userid);
         ResultSet rsSD = psSD.executeQuery();
-        if(rsSD.next()){
+
+        if(rsSD != null){
             rsSD.next();
             textFieldDocumentName.setText(rsSD.getString(1));
             textAreaDocumentContent.setText(rsSD.getString(2));
         }
-
     }
 }
