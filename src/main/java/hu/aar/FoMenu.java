@@ -60,6 +60,10 @@ public class FoMenu  {
         documentModel.saveDocumentToRootFolder(textFieldDocumentName.getText(), textAreaDocumentContent.getText());
     }
 
+    public void loadDocument() throws SQLException {
+        documentModel.loadDocument(textFieldDocumentName,textAreaDocumentContent);
+    }
+
 
 
 }

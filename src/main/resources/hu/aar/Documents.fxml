@@ -17,7 +17,7 @@
             <Text layoutX="25.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Név:" />
             <TextField fx:id="textFieldDocumentName" layoutX="53.0" layoutY="22.0" />
             <Button layoutX="215.0" layoutY="336.0" mnemonicParsing="false" text="Mentés másként" />
-            <Button layoutX="333.0" layoutY="336.0" mnemonicParsing="false" text="Megnyitás" />
+            <Button fx:id="buttonOpenDocuments" layoutX="333.0" layoutY="336.0" mnemonicParsing="false" onAction="#loadDocument" text="Megnyitás" />
             <Button layoutX="419.0" layoutY="336.0" mnemonicParsing="false" text="Megosztás" />
             <Button fx:id="buttonNewDocument" layoutX="27.0" layoutY="336.0" mnemonicParsing="false" onAction="#clearDocument" prefHeight="25.0" prefWidth="104.0" text="Új dokumentum" />
          </children>
