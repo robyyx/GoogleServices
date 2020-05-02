@@ -7,6 +7,8 @@ import javafx.scene.control.TextField;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import static hu.aar.Hibauzenet.display;
+
 public class Regisztracio {
 
     private RegistrationModel registrationModel = new RegistrationModel();
@@ -26,7 +28,13 @@ public class Regisztracio {
     }
 
     public void registerUser() throws IOException, SQLException {
-        registrationModel.createUser(registerFieldEmail.getText(), registerFieldName.getText(), registerFieldPassword.getText());
-        App.setRoot("progStart");
+        if (registerFieldPassword.getText().equals("")|| registerFieldEmail.getText() == "" || registerFieldPasswordAgain.getText().equals("") || registerFieldName.getText() == ""){
+            display("HIBA", "Valamelyik érték nincs megadva");
+        } else if  (!registerFieldPassword.getText().equals(registerFieldPasswordAgain.getText())) {
+            display("HIBA", "Jelszavak nem egyeznek");
+        } else {
+           /* registrationModel.createUser(registerFieldEmail.getText(), registerFieldName.getText(), registerFieldPassword.getText());
+            App.setRoot("progStart");*/
+        }
     }
 }

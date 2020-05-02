@@ -3,6 +3,8 @@ package hu.aar.Naptar;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -36,8 +38,12 @@ public class FullCalendarView extends Node {
             for (int j = 0; j < 7; j++) {
                 AnchorPaneNode ap = new AnchorPaneNode();
                 ap.setPrefSize(200,200);
+                Text text = new Text("nice");
+
                 calendar.add(ap,j,i);
+                calendar.add(text, j,i);
                 allCalendarDays.add(ap);
+
             }
         }
         // Days of the week labels
@@ -49,10 +55,12 @@ public class FullCalendarView extends Node {
         Integer col = 0;
         for (Text txt : dayNames) {
             AnchorPane ap = new AnchorPane();
+
             ap.setPrefSize(200, 10);
             ap.setBottomAnchor(txt, 5.0);
             ap.getChildren().add(txt);
-            dayLabels.add(ap, col++, 0);
+            dayLabels.add(ap,  col++, 0);
+
         }
         // Create calendarTitle and buttons to change current month
         calendarTitle = new Text();
