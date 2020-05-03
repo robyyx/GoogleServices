@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.time.YearMonth;
 
+import static hu.aar.Megnyitaspop.Opendoc;
+
 public class App extends Application {
 
     private static Scene scene;
@@ -24,7 +26,9 @@ public class App extends Application {
 
 
 
+
     }
+
 
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
@@ -38,5 +42,8 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
+
+
+
 
 }
