@@ -11,7 +11,7 @@
                     <MenuItem mnemonicParsing="false" onAction="#switchToEventCreator" text="Esemény készités/módosítás" />
                 </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="Mappák">
+            <Menu mnemonicParsing="false" text="Filerendszer">
                 <items>
                     <MenuItem mnemonicParsing="false" onAction="#switchToDocuments" text="Dokumentumok" />
                     <SeparatorMenuItem mnemonicParsing="false" />

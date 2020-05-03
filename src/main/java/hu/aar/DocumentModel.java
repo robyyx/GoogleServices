@@ -25,7 +25,7 @@ public class DocumentModel {
         rsRFID.next();
         int rootfolderid = rsRFID.getInt(1);
 
-        //is this document name already taken by you?
+        //is this document name already taken by you in this folder?
         String sqlSearchForSameNameDocument = "select count(ID) from DOCUMENT where NAME = ? AND OWNERID = ? AND FOLDERID = ?";
         PreparedStatement psSSND = DatabaseConnection.getConnection().prepareStatement(sqlSearchForSameNameDocument);
         psSSND.setString(1, name);
@@ -53,9 +53,6 @@ public class DocumentModel {
             psIDRF.setString(4,name);
             psIDRF.execute();
         }
-
-
-
     }
 
     public void loadDocument(TextField textFieldDocumentName, TextArea textAreaDocumentContent) throws SQLException {
