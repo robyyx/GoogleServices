@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.aar.FoMenu">
+    <fx:include source="Navigator.fxml" />
+   <AnchorPane prefHeight="179.0" prefWidth="575.0">
+      <children>
+         <VBox fx:id="folders" layoutX="242.0" prefHeight="319.0" prefWidth="241.0" />
+         <Button layoutX="14.0" layoutY="62.0" mnemonicParsing="false" text="Új" />
+         <Button layoutX="16.0" layoutY="102.0" mnemonicParsing="false" onAction="#openFolders" text="Megnyit" />
+         <TextField layoutX="14.0" layoutY="25.0" />
+      </children>
+   </AnchorPane>
+</VBox>

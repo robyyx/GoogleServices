@@ -15,9 +15,8 @@
                 <items>
                     <MenuItem mnemonicParsing="false" onAction="#switchToDocuments" text="Dokumentumok" />
                     <SeparatorMenuItem mnemonicParsing="false" />
-                    <MenuItem mnemonicParsing="false" text="Mappa létrehozása" />
-                    <MenuItem mnemonicParsing="false" text="Mappa modositasa" />
-                    <MenuItem mnemonicParsing="false" text="Mappa megosztasa" />
+                    <MenuItem mnemonicParsing="false" onAction="#switchToFolders" text="Mappák" />
+
                 </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Csoportok">
