@@ -81,7 +81,7 @@ public class FoMenu  {
     public void loadDocument() throws SQLException {
         String[] neat = {"Volvo", "BMW", "Ford", "Mazda"};
         Opendoc(neat);
-        //documentModel.loadDocument(textFieldDocumentName,textAreaDocumentContent);
+        documentModel.loadDocument(textFieldDocumentName,textAreaDocumentContent);
     }
   
    public void logOut() throws IOException, SQLException {
