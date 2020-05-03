@@ -30,4 +30,10 @@ public class LoginModel {
         }
         return false;
     }
+
+    public void logoutUser() throws SQLException {
+        String sqlEmptyLoggedinuser = "DELETE FROM LOGGEDINUSER";
+        PreparedStatement prepareStatement2 = DatabaseConnection.getConnection().prepareStatement(sqlEmptyLoggedinuser);
+        prepareStatement2.execute();
+    }
 }
