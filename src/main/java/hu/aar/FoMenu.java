@@ -19,6 +19,7 @@ public class FoMenu  {
     DocumentModel documentModel = new DocumentModel();
     LoginModel loginModel = new LoginModel();
     EventModel eventModel = new EventModel();
+    FolderModel folderModel = new FolderModel();
 
     @FXML
     private TextField textFieldDocumentName;
@@ -115,6 +116,13 @@ public class FoMenu  {
     public void saveEvent() throws SQLException {
 
         eventModel.saveEventToOwnCalendar(textFieldEventName.getText(), datePickerEventDate.getValue(), textAreaEventDescription.getText());
+    }
+
+    @FXML
+    TextField textFieldFolderName;
+
+    public void addFolder() throws SQLException {
+        folderModel.createFolder(textFieldFolderName.getText());
     }
 
 }
