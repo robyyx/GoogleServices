@@ -33,8 +33,8 @@ public class Regisztracio {
         } else if  (!registerFieldPassword.getText().equals(registerFieldPasswordAgain.getText())) {
             display("HIBA", "Jelszavak nem egyeznek");
         } else {
-           /* registrationModel.createUser(registerFieldEmail.getText(), registerFieldName.getText(), registerFieldPassword.getText());
-            App.setRoot("progStart");*/
+            registrationModel.createUser(registerFieldEmail.getText(), registerFieldName.getText(), registerFieldPassword.getText());
+            App.setRoot("progStart");
         }
     }
 }

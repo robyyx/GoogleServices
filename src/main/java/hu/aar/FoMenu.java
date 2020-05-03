@@ -2,6 +2,7 @@ package hu.aar;
 
 import hu.aar.Naptar.FullCalendarView;
 import javafx.fxml.FXML;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
@@ -16,6 +17,8 @@ import static hu.aar.Megnyitaspop.Opendoc;
 public class FoMenu  {
 
     DocumentModel documentModel = new DocumentModel();
+    LoginModel loginModel = new LoginModel();
+    EventModel eventModel = new EventModel();
 
     @FXML
     private TextField textFieldDocumentName;
@@ -52,7 +55,6 @@ public class FoMenu  {
 
     public void switchToDocuments () throws IOException {
         App.setRoot("Documents");
-
      }
 
     public void switchToCalendar () throws IOException {
@@ -81,14 +83,38 @@ public class FoMenu  {
         Opendoc(neat);
         //documentModel.loadDocument(textFieldDocumentName,textAreaDocumentContent);
     }
-
+  
+   public void logOut() throws IOException, SQLException {
+        loginModel.logoutUser();
+        App.setRoot("progStart");
+    }
+    
     public void switchToFolders () throws IOException {
         App.setRoot("Folders");
     }
+
+    @FXML
+    TextField textFieldEventName;
+    @FXML
+    DatePicker datePickerEventDate;
+    @FXML
+    TextArea textAreaEventDescription;
+
+    public void clearEventFields(){
+        textFieldEventName.setText("");
+        datePickerEventDate.setValue(null);
+        textAreaEventDescription.setText("");
+    }
+  
+  
 
     public void openFolders () throws IOException {
         Mapsorter map = new Mapsorter(randomGen());
     }
 
+    public void saveEvent() throws SQLException {
+
+        eventModel.saveEventToOwnCalendar(textFieldEventName.getText(), datePickerEventDate.getValue(), textAreaEventDescription.getText());
+    }
 
 }
