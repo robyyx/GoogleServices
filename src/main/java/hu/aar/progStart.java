@@ -29,9 +29,9 @@ public class progStart {
         if (loginEmail.getText().equals("") && loginPassword.getText().equals("1")) {
             App.setRoot("FoMenu");
         }
-        if(loginModel.loginUser(loginEmail.getText(),loginPassword.getText())){
+       /* if(loginModel.loginUser(loginEmail.getText(),loginPassword.getText())){
                 App.setRoot("FoMenu");
-        };
+        };*/
     }
 
     public void switchToRegister() throws IOException {

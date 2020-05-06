@@ -1,5 +1,6 @@
 package hu.aar.Naptar;
 
+import hu.aar.EsemenyPopup;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
@@ -23,6 +24,10 @@ public class FullCalendarView extends Node {
     private Text calendarTitle;
     private YearMonth currentYearMonth;
 
+    //tesztelo valtozok
+    private String[] test = {"Kenyersutes", "Semmittevés", "Kávéfőzés", "Alvás"};
+    boolean event = true;
+
     /**
      * Create a calendar view
      * @param yearMonth year month to create the calendar of
@@ -38,10 +43,8 @@ public class FullCalendarView extends Node {
             for (int j = 0; j < 7; j++) {
                 AnchorPaneNode ap = new AnchorPaneNode();
                 ap.setPrefSize(200,200);
-                Text text = new Text("nice");
-
                 calendar.add(ap,j,i);
-                calendar.add(text, j,i);
+
                 allCalendarDays.add(ap);
 
             }
@@ -81,6 +84,7 @@ public class FullCalendarView extends Node {
      * @param yearMonth year and month of month to render
      */
     public void populateCalendar(YearMonth yearMonth) {
+        Text text;
         // Get the date we want to start with on the calendar
         LocalDate calendarDate = LocalDate.of(yearMonth.getYear(), yearMonth.getMonthValue(), 1);
         // Dial back the day until it is SUNDAY (unless the month starts on a sunday)
@@ -93,6 +97,26 @@ public class FullCalendarView extends Node {
                 ap.getChildren().remove(0);
             }
             Text txt = new Text(String.valueOf(calendarDate.getDayOfMonth()));
+            //dátum az objectekre
+            System.out.println(calendarDate);
+            if (event) {
+               text = new Text("event");
+                text.setOnMouseClicked(
+                        event -> {
+                            EsemenyPopup e = new EsemenyPopup(test);
+                        }
+                );
+                ap.getChildren().add(text);
+
+            } else {
+                text = new Text("nincs event");
+                ap.getChildren().add(text);
+            }
+
+            ap.setTopAnchor(text, 30.0);
+            ap.setLeftAnchor(text, 30.0);
+
+
             ap.setDate(calendarDate);
             ap.setTopAnchor(txt, 5.0);
             ap.setLeftAnchor(txt, 5.0);
