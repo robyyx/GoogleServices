@@ -27,6 +27,7 @@ public class FullCalendarView extends Node {
     //tesztelo valtozok
     private String[] test = {"Kenyersutes", "Semmittevés", "Kávéfőzés", "Alvás"};
     boolean event = true;
+    boolean set = false;
 
     /**
      * Create a calendar view
@@ -120,7 +121,8 @@ public class FullCalendarView extends Node {
             ap.setDate(calendarDate);
             ap.setTopAnchor(txt, 5.0);
             ap.setLeftAnchor(txt, 5.0);
-            ap.getChildren().add(txt);
+
+                ap.getChildren().add(txt);
             calendarDate = calendarDate.plusDays(1);
         }
         // Change the title of the calendar
@@ -131,6 +133,9 @@ public class FullCalendarView extends Node {
      * Move the month back by one. Repopulate the calendar with the correct dates.
      */
     private void previousMonth() {
+        for (AnchorPaneNode ap : allCalendarDays) {
+            ap.getChildren().remove(0);
+        }
         currentYearMonth = currentYearMonth.minusMonths(1);
         populateCalendar(currentYearMonth);
     }
@@ -139,6 +144,9 @@ public class FullCalendarView extends Node {
      * Move the month forward by one. Repopulate the calendar with the correct dates.
      */
     private void nextMonth() {
+        for (AnchorPaneNode ap : allCalendarDays) {
+            ap.getChildren().remove(0);
+        }
         currentYearMonth = currentYearMonth.plusMonths(1);
         populateCalendar(currentYearMonth);
     }
